@@ -7,7 +7,7 @@ fi
 
 case "$1" in
   webserver)
-    airflow db init
+    airflow db upgrade
     airflow users create \
     --username airflow \
     --firstname Peter \

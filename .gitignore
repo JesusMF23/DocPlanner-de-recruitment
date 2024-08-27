@@ -4,3 +4,6 @@ __pycache__
 *scratch*
 venv/
 .vscode/
+docker/airflow_pgdata/
+docker/volume/
+process.md

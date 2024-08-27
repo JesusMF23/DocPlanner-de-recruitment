@@ -1,0 +1,28 @@
+Table weather_data {
+  station_id varchar [primary key]
+  date timestamp [primary key]
+  tavg float
+  tmin float
+  tmax float
+  prcp float
+}
+
+Table stations_info {
+  station_id varchar [primary key]
+  name varchar
+  latitude float
+  longitude float
+  elevation float
+}
+
+Table dates_info {
+  date timestamp [primary key]
+  day_of_week varchar
+  month varchar
+  quarter varchar
+  year integer
+}
+
+Ref: weather_data.station_id > stations_info.station_id // many-to-one
+
+Ref: weather_data.date > dates_info.date // many-to-one

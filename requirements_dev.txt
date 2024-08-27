@@ -1,2 +1,6 @@
-apache-airflow==2.3.0
+apache-airflow[amazon,postgres]==2.3.0
 awscli-local==0.20
+polars==1.5.0
+pytest==8.3.2
+# setuptools==73.0.1
+pendulum==2.1.2

@@ -9,6 +9,10 @@ RUN set -ex \
     && unzip awscliv2.zip \
     && ./aws/install
 
+COPY s3_creation.sh /opt/airflow/
+# make the s3 creation file executable
+RUN chmod +x /opt/airflow/s3_creation.sh
+
 # install needed python modules
 USER airflow
 COPY entrypoint.sh /opt/airflow/
